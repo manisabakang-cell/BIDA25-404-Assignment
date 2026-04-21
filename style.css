@@ -1,0 +1,55 @@
+/* Global Styles */ 
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 1; 
+    padding: 1; 
+    background-color: #f9f9f9; 
+    color: #333; 
+} 
+ 
+/* Navigation */ 
+nav { 
+    background-color: #333; 
+    padding: 15px; 
+    text-align: center; 
+} 
+ 
+nav a { 
+    color: pink; 
+    text-decoration: none; 
+    margin: 0 10px; 
+} 
+ 
+nav a:hover { 
+    text-decoration: underline; 
+} 
+
+/* Headers */ 
+header { 
+    background-color: black 
+    color: white; 
+    padding: 30px; 
+    text-align: center; 
+} 
+
+/* Main Content */ 
+main { 
+    padding: 20px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+} 
+
+/* Footer */ 
+footer { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    margin-top: 30px; 
+} 
+
+/* Images */ 
+img { 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+} 
