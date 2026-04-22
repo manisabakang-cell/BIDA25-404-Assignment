@@ -1,6 +1,6 @@
 /* Global Styles */ 
 body { 
-    font-family: Bell MT, sans-serif; 
+    font-family: Arial, sans-serif; 
     margin: 1; 
     padding: 1; 
     background-color: #f9f9f9; 
@@ -17,7 +17,7 @@ nav {
 nav a { 
     color: pink; 
     text-decoration: none; 
-    margin: 1px; 
+    margin: 0 10px; 
 } 
  
 nav a:hover { 
@@ -35,9 +35,10 @@ header {
 /* Main Content */ 
 main { 
     padding: 15px; 
-    max-width: 200px; 
+    max-width: 600px; 
     margin: 0 auto; 
     text-align: left;
+    font-size: small;
 } 
 
 /* Footer */ 
