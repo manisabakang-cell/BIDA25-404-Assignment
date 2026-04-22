@@ -17,7 +17,7 @@ nav {
 nav a { 
     color: pink; 
     text-decoration: none; 
-    margin: 0 10 px; 
+    margin: 0 20 px; 
 } 
  
 nav a:hover { 
@@ -37,8 +37,8 @@ main {
     padding: 15 px; 
     max-width: 600 px; 
     margin: 20 auto; 
-    text-align: left;
-    font-size: small;
+    text-align: center;
+    font-size: medium;
 } 
 
 /* Footer */ 
