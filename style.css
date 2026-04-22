@@ -10,14 +10,14 @@ body {
 /* Navigation */ 
 nav { 
     background-color: #333; 
-    padding: 15px; 
+    padding: 15 px; 
     text-align: left; 
 } 
  
 nav a { 
     color: pink; 
     text-decoration: none; 
-    margin: 0 10px; 
+    margin: 0 10 px; 
 } 
  
 nav a:hover { 
@@ -34,8 +34,8 @@ header {
 
 /* Main Content */ 
 main { 
-    padding: 15px; 
-    max-width: 600px; 
+    padding: 15 px; 
+    max-width: 600 px; 
     margin: 0 auto; 
     text-align: left;
     font-size: small;
@@ -46,12 +46,12 @@ footer {
     background-color: #333; 
     color: pink; 
     text-align: center; 
-    padding: 15px; 
-    margin-top: 30px; 
+    padding: 15 px; 
+    margin-top: 30 px; 
 } 
 
 /* Images */ 
 img { 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 10 px; 
+    box-shadow: 0 4 px 8 px rgba (0,0,0,0.1); 
 } 
