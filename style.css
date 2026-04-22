@@ -1,6 +1,6 @@
 /* Global Styles */ 
 body { 
-    font-family: Arial, sans-serif; 
+    font-family: Bell MT, sans-serif; 
     margin: 1; 
     padding: 1; 
     background-color: #f9f9f9; 
@@ -11,13 +11,13 @@ body {
 nav { 
     background-color: #333; 
     padding: 15px; 
-    text-align: center; 
+    text-align: left; 
 } 
  
 nav a { 
     color: pink; 
     text-decoration: none; 
-    margin: 0 10px; 
+    margin: 1px; 
 } 
  
 nav a:hover { 
@@ -27,22 +27,23 @@ nav a:hover {
 /* Headers */ 
 header { 
     background-color: black 
-    color: white; 
+    color: pink; 
     padding: 30px; 
     text-align: center; 
 } 
 
 /* Main Content */ 
 main { 
-    padding: 20px; 
+    padding: 15px; 
     max-width: 200px; 
     margin: 0 auto; 
+    text-align: left;
 } 
 
 /* Footer */ 
 footer { 
     background-color: #333; 
-    color: white; 
+    color: pink; 
     text-align: center; 
     padding: 15px; 
     margin-top: 30px; 
