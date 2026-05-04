@@ -51,11 +51,11 @@ h1,h2,h3,h4,h5,h6,h7,h8 {
 /* Footer */ 
 footer { 
     background-color: pink; 
-    color: white; 
+    color: black; 
     text-align: center; 
     padding: 15 px; 
     margin-top: 0 20 px; 
-    font-size: small;
+    font-size: medium;
 } 
 
 /* Images */ 
