@@ -32,10 +32,24 @@
         <a href="contact.html">Contact</a> 
     </section> 
     </main>
-    <style="background-image: url('home,404.jpg');">
-        <h1>Home</h1>
-        <p>This text is on top of the background image.</p>
     <img src="home,404.jpg" alt="Home" width="600"> 
+    <style>
+        body {
+            /* Background image */
+            background-image: url('home,404.jpg');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        /* Transparent overlay */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* black with transparency */
+            min-height: 100vh; /* full screen height */
+            text-align: center;
+            padding: 50 px;
+        }
+    </style>
     </body>
 <footer> 
     <p>&copy; 2025 Find your Home</p> 
