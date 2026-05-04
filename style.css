@@ -10,15 +10,15 @@ body {
           
 /* Navigation */ 
 nav { 
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     padding: 15 px; 
     text-align: left;
     font-weight: lighter;
 } 
  
 nav a { 
-    color: pink; 
+    color: white; 
     text-decoration: none; 
     margin: 0 20 px; 
 } 
