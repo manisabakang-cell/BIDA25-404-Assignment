@@ -12,15 +12,17 @@ body {
 nav { 
     background-color: black;
     color: white;
-    padding: 15 px; 
+    padding: 10px; 
     text-align: left;
     font-weight: lighter;
+    display: flex;
+    justify-content: center;
 } 
  
 nav a { 
     color: white; 
     text-decoration: none; 
-    margin: 0 20 px; 
+    margin: 0 15px; 
 } 
  
 nav a:hover { 
