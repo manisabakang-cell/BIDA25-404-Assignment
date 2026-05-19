@@ -40,8 +40,7 @@ header {
 
 /* Main Content */ 
 main { 
-    padding: 15 px; 
-    max-width: 600 px; 
+    padding: 15 px;  
     margin: 0 20 px; 
     text-align: left;
     font-size: medium;
