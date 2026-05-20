@@ -41,7 +41,7 @@ header {
 
 /* Main Content */ 
 main { 
-    padding: 15 px;  
+    padding-left: 20px;  
     margin: 0 20 px; 
     text-align: left;
     font-size: medium;
