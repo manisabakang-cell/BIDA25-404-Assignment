@@ -17,45 +17,43 @@
 			width: 100%;
         }
 		/* Headers */ 
-header { 
-    background-color: black;
-    color: pink; 
-    padding: 15 px; 
-    text-align: center;
-    margin: 0 20 px;
-	font-size: medium;
-} 
+        header { 
+            background-color: black;
+            color: pink; 
+            padding: 15 px; 
+            text-align: center;
+            margin: 0 20 px;
+        	font-size: medium;
+        } 
 		/* Navigation */ 
-nav { 
-    background-color: black;
-    color: white;
-    padding: 10px; 
-    text-align: left;
-    font-weight: medium;
-    display: flex;
-    justify-content: center;
-	gap: 10px;
-	flex-wrap: wrap;
-	
-} 
+        nav { 
+            background-color: black;
+            color: white;
+            padding: 10px; 
+            text-align: left;
+            display: flex;
+            justify-content: center;
+        	gap: 10px;
+        	flex-wrap: wrap;
+        } 
  
-nav a { 
-    color: white; 
-    text-decoration: none; 
-    margin: 0 15px; 
-} 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+        } 
  
-nav a:hover { 
-    text-decoration: underline; 
-} 
-      .testimonial-container {
+        nav a:hover { 
+            text-decoration: underline; 
+        } 
+        .testimonial-container {
             display: grid;
             grid-template-columns: 1fr; 
             gap: 20px;
             padding: 20px;
             margin-bottom: 60px;
         }
-      .testimonial {
+        .testimonial {
             border: 1px solid #ccc;
             padding: 15px;
             text-align: center;
@@ -66,25 +64,28 @@ nav a:hover {
 		.h1 {
 			font-size: 1.0em;
 		}	
-      h1 {
-        text-align: center;
-        background-color: black;
-		font-size: medium;
-        font-weight: medium;
-        color: pink;
-      }
-		h2 {
-			font-weight: 500;
-			color: white;
-			font-size: medium;
-		}
-      form {
+        h1 {
+            text-align: center;
+		    font-size: medium;
+            font-weight: medium;
+            color: pink;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        h2 {
+            text-align: center;
+		    font-size: 1.4em;
+            font-weight: medium;
+            color: pink;
+
+        }
+        form {
             width: 100%;
             margin: auto;
             margin-top: 50px;
             margin-bottom: 50px;
             background-color: white;
-            padding: 25 px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -176,7 +177,7 @@ nav a:hover {
     </nav>  
   </header>
     <main class="container my-5">
-        <h1>See What Other People Think About Us!</h1>
+        <h2>See What Other People Think About Us!</h2>
         <div class="testimonial-container">
           <div class="testimonial" data-name="t1">
           <article>
@@ -196,7 +197,7 @@ nav a:hover {
           </div> 
           <div class="testimonial" data-name="t3">
           <article>
-            <p>I would give the their customer service a 10/ 10</p>
+            <p>I would give their customer service a 10/ 10</p>
             <div class="h1">
               Tsalano Tiny
             </div>
@@ -225,8 +226,10 @@ nav a:hover {
               Andrew Johane
             </div>
           </article>
-          </div>   
-        <h1>Tell Us About Your Experience</h1>
+          </div>
+        </div> 
+
+        <h2>Tell Us About Your Experience</h2>
         <form action="acknowledgement.html" method="get">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
