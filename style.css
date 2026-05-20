@@ -58,6 +58,7 @@ footer {
     font-size: medium;
     position: fixed;
     width: 100%;
+    bottom: 0;
 } 
 
 /* Images */ 
