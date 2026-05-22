@@ -243,6 +243,31 @@
                 <button type="submit" class="submit-btn">Submit</button>
             </div>
         </form>
+		<!-- SUCCESS MESSAGE -->
+
+        <div id="successMessage">
+
+            Thank you! Your feedback has been successfully delivered.
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showMessage(event){
+
+            // Prevent page refresh
+
+            event.preventDefault();
+
+            // Display success message
+
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+    </script>
     </main> 
 	<footer>
         <p>&copy; 2025 Find Your Home</p>
