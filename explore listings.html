@@ -1,135 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
-    <title>Explore Listings</title>
-    <link rel="stylesheet" href="style.css"> 
-	<!-- Bootstrap CSS -->
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Listings - Find Your Home</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<style>
+
+    <style>
+
         body {
-            /* Background image */
             background-image: url('background 2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-			min-height: 100vh;
-			width: 100%;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
         }
-		nav { 
-    background-color: black;
-    color: white;
-    padding: 10px; 
-    text-align: left;
-    font-weight: medium;
-    display: flex;
-    justify-content: center;
-	gap: 10px;
-	flex-wrap: wrap;
-	
-} 
- 
-nav a { 
-    color: white; 
-    text-decoration: none; 
-    margin: 0 15px; 
-} 
- 
-nav a:hover { 
-    text-decoration: underline; 
-} 
-main { 
-    padding-left: 20 px;
-	color: white;
-}	
-h2 { 
-	color: white;
-	padding-left: 20px; 
-}	
-	</style>
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Main */
+        main {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.45);
+            min-height: 70vh;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        h2 {
+            color: #d4af37;
+            margin-bottom: 40px;
+        }
+
+        /* Listings Grid */
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Property Card */
+        .listing-card {
+            background: rgba(255, 255, 255, 0.92);
+            color: black;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.4s ease,
+                        box-shadow 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .listing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .listing-content {
+            padding: 20px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .status {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .animated-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+
+            border-radius: 0%;
+
+            transition:
+                border-radius 1s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+            animation: circleReveal 2s forwards;
+        }
+
+        .animated-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes circleReveal {
+
+            from {
+                border-radius: 0%;
+                transform: rotate(0deg);
+            }
+
+            to {
+                border-radius: 50%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+
 </head>
+
 <body>
-  <header>
-    <h1>Explore Listings</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a> 
-        <a href="explore listings.html">Explore Listings</a>  
-        <a href="contact.html">Contact</a>
-		<a href="testimonials">Testimonials</a>
-    </nav>  
-  </header>
-	<main>
-	<section class="listings"> 
-		<h2> Available Properties</h2>
-		<div class="listings">
-			<img src="double story.jpg" alt="Double story" width="300"> 
-			<h3>P5 000 000,00</h3>
-			<p>For sale<p/>
-			<p>Double story, 4 beds, all ensuite, guest restroom, open plan living room</p>
-			<p>2 private parking garage, private pool, fully air conditioned, private garden</p> 
-			<p>Staircase, smart home, mini tennis court, floor to ceiling windows</p> 
-			<p>Located in Phakalane Golf Estate, Gaborone</p>
-		</div>
-		
-		<div class="listings">
-			<img src="op.jpg" alt="Double story" width="300"> 
-			<h3>P3 000 000,00</h3>
-			<p>For sale<p/>
-			<p>Double story, 3 beds, 1 ensuite, open plan living room</p>
-			<p>2 private parking garage, private pool, fully air conditioned, private garden, floor to ceiling windows</p>    
-			<p>Located in Phakalane Golf Estate, Gaborone</p>
-		</div>
 
-		<div class="listings">
-			<img src="qer.jpg" alt="Nature scape" width="300"> 
-			<h3>P3 500 000,00</h3>
-			<p>For sale<p/>
-			<p>Double story, 3 beds, 1 ensuite, open plan living room</p> 
-			<p>Servant quater, mountain view, outskirts of the city</p>
-			<p>2 private parking garage, private pool</p> 
-			<p>Fully air conditioned, private garden, floor to ceiling windows</p>    
-			<p>Located in Phakalane Setlhoa Estate, Gaborone</p>
-		</div>
+    <header>
 
-		<div class="listings">
-			<img src="lkl.jpg" alt="Forest views" width="300"> 
-			<h3>P2 500 000,00</h3>
-			<p>For sale<p/>
-			<p>2 beds, 2 ensuite, open plan living room</p>
-			<p>2 private parking garage, private pool</p>
-			<P>Fully air conditioned, private garden, mini golf course</P> 
-			<p>Floor to ceiling windows</p>    
-			<p>Located in Phakalane, Gaborone</p>
-		</div>
+        <h1>Find Your Home</h1>
 
-		<div class="listings">
-			<img src="blue 2 beds.jpg" alt="Cityscape" width="300">
-			<h3>P1 500 000,00</h3>
-			<p>For sale<p/>
-			<p>2 beds, 1 ensuite,  open plan living room</p>
-			<p>Private parking slot, residence indoor pool</p> 
-			<p>Fully air conditioned, playground, floor to ceiling windows</p>    
-			<p>Located in Phakalane, Gaborone</p>
-			
-		</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore listings.html">Explore Listings</a>
+            <a href="contact.html">Contact</a>
+            <a href="testimonials.html">Testimonials</a>
+        </nav>
 
-		<div class="listings">
-			<img src="2 bedroom 1 ensuite.jpg" alt="Flats view" width="300">
-			<h3>P10 000,00</h3>
-			<p>For rent</p>
-			<p>2 beds, 1 ensuite, open plan kitchen, balcony</p>
-			<p>Private parking slot, residence indoor gym, indoor swimming pool</p>
-			<p>Outdoor playground, fully furnished, fully air conditioned</p>
-			<p>Located in Block 10 Gaborone</p>
-				
-		</div>
+    </header>
 
-	</section>
-</main>		
-<footer> 
-    <p>&copy; 2025 Find your Home</p> 
-</footer> 
-</body>	
+    <main>
+
+        <h2>Available Properties</h2>
+
+        <div class="property-grid">
+
+            <!-- Property 1 -->
+            <div class="listing-card">
+
+                <img src="double story.jpg" alt="Double Story House">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P5 000 000,00
+                    </div>
+
+                    <div class="status">
+                        For Sale
+                    </div>
+
+                    <p>
+                        Double story, 4 beds, all ensuite, guest restroom, open-plan living room.
+                    </p>
+
+                    <p>
+                        2 private garages, private pool, smart home, private garden.
+                    </p>
+
+                    <p>
+                        Mini tennis court, staircase, floor-to-ceiling windows.
+                    </p>
+
+                    <p>
+                        Located in Phakalane Golf Estate, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Property 2 -->
+            <div class="listing-card">
+
+                <img src="op.jpg" alt="Luxury House">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P3 000 000,00
+                    </div>
+
+                    <div class="status">
+                        For Sale
+                    </div>
+
+                    <p>
+                        Double story, 3 beds, 1 ensuite, open-plan living room.
+                    </p>
+
+                    <p>
+                        2 garages, private pool, air conditioning, garden.
+                    </p>
+
+                    <p>
+                        Floor-to-ceiling windows.
+                    </p>
+
+                    <p>
+                        Located in Phakalane Golf Estate, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Property 3 -->
+            <div class="listing-card">
+
+                <img src="qer.jpg" alt="Nature House">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P3 500 000,00
+                    </div>
+
+                    <div class="status">
+                        For Sale
+                    </div>
+
+                    <p>
+                        3 beds, servant quarter, mountain view.
+                    </p>
+
+                    <p>
+                        Private pool, garden, fully air conditioned.
+                    </p>
+
+                    <p>
+                        Located in Phakalane Setlhoa Estate, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Property 4 -->
+            <div class="listing-card">
+
+                <img src="lkl.jpg" alt="Forest View Home">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P2 500 000,00
+                    </div>
+
+                    <div class="status">
+                        For Sale
+                    </div>
+
+                    <p>
+                        2 beds, 2 ensuite, open-plan living room.
+                    </p>
+
+                    <p>
+                        Mini golf course, private pool, garden.
+                    </p>
+
+                    <p>
+                        Located in Phakalane, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Property 5 -->
+            <div class="listing-card">
+
+                <img src="blue 2 beds.jpg" alt="City Apartment">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P1 500 000,00
+                    </div>
+
+                    <div class="status">
+                        For Sale
+                    </div>
+
+                    <p>
+                        2 beds, ensuite, open-plan living room.
+                    </p>
+
+                    <p>
+                        Indoor pool, playground, parking slot.
+                    </p>
+
+                    <p>
+                        Located in Phakalane, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Property 6 -->
+            <div class="listing-card">
+
+                <img src="2 bedroom 1 ensuite.jpg" alt="Apartment">
+
+                <div class="listing-content">
+
+                    <div class="price">
+                        P10 000,00
+                    </div>
+
+                    <div class="status">
+                        For Rent
+                    </div>
+
+                    <p>
+                        2 beds, ensuite, balcony, open-plan kitchen.
+                    </p>
+
+                    <p>
+                        Indoor gym, swimming pool, playground.
+                    </p>
+
+                    <p>
+                        Fully furnished and air conditioned.
+                    </p>
+
+                    <p>
+                        Located in Block 10, Gaborone.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+
+            <img src="logo.jpg"
+                 alt="Brand Logo"
+                 class="animated-image">
+
+            <h3 class="mt-4">
+                --- Find Your Home ---
+            </h3>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Find Your Home. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
