@@ -1,105 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css"> 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Real Estate Website</title>
+
     <style>
-        body {
-            /* Background image */
-            background-image: url('home page 2.jpg');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-image: url("house.jpg");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-			min-height: 100vh;
-			width: 100%;
+            height: 100vh;
         }
-		h3,h4 {
-			float: right;
-			color: white;
-			background-color: black; 
-		}
-		button { 
-			cursor: pointer;
-		}
-		/* submit button */
-		.submit-btn {
-			background-color: black
-			color: pink;
-		}
-		.submit-btn:hover {
-			text-decoration: underline;
-		}
-		/* complete button */
-		.complete-btn {
-			background-color: pink;
-			color: black;
-		}	
+
+        /* Top Buttons */
+
+        .top-buttons{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-buttons button{
+            padding: 12px 25px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .top-buttons button:hover{
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        /* Welcome Section */
+
+        .welcome{
+            color: white;
+            padding: 60px;
+            width: 60%;
+        }
+
+        .welcome h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .welcome p{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Form Box */
+
+        .form-box{
+            position: absolute;
+            top: 100px;
+            right: 30px;
+
+            width: 350px;
+            padding: 30px;
+
+            background: rgba(0,0,0,0.7);
+
+            border-radius: 15px;
+
+            color: white;
+
+            display: none;
+        }
+
+        .form-box h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-box input{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+
+            border: none;
+            border-radius: 8px;
+        }
+
+        .submit-btn{
+            width: 100%;
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: royalblue;
+            color: white;
+
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover{
+            background-color: dodgerblue;
+        }
+
+        /* Hidden Website Content */
+
+        #websiteContent{
+            display: none;
+            color: white;
+            padding: 60px;
+        }
+
+        .property-box{
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
+
 <body>
-  <header>
-    <h1>Home</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a> 
-        <a href="explore listings.html">Explore Listings</a>  
-        <a href="log in or sign in.html">Log in or Sign in</a>
-        <a href="contact.html">Contact</a>
-        <a href="testimonials">Testimonials</a>
-    </nav>
-  </header>
-    <main>
-    <section> 
-        <h2>Welcome to our website</h2> 
-        <p> Here we meet, contact, get and give out information online</p>
-        <p> We connect buyers and sellers, providing reliable real estate information online<p/>
-        <p>A real estate agency established in 2025 @ Find your home</p>
-		<h3>Log in</h3>  
-            <div> 
-                <label for="username">Your Username:</label><br> 
-                <input type="text" id="name" name="name" required> 
-            </div> 
-            <br>
-            <div>
-                <label for="password">Your Password:</label><br>
-                <input type="text" id="password" password="password" required> 
-            </div>
-            <br> 
-            <button type="submit">Submit</button> 
-        <h4>Sign in</h4>
-            <div>
-                <label for="your full names">Your Full Names:</label><br>
-                <input type="text" id="full names" full names="full nnames" required>
-            </div>
-            <br>
-            <div>
-                <label for="your email">Your Email:</label><br>
-                <input type="text" id="email" email="email" required> 
-            </div>
-            <br>
-            <div>
-                <label for="create your password">Create Your Password:</label><br>
-                <input type="text" id="password" password="password" required>
-            </div>
-            <br>
-            <div>
-                <label for="confirm your password">Confirm Your Password:</label><br>
-                <input type="text" id="password" password="password" required>
-            </div>
-            <br>
-            <button type="submit">Complete</button
-          </form> 
-      </section>
-    </main> 
-    <footer> 
-    <p>&copy; 2025 Find your Home</p> 
-    </footer>     
-        <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- LOGIN & SIGNUP BUTTONS -->
+
+    <div class="top-buttons">
+
+        <button onclick="showLogin()">
+            Log in
+        </button>
+
+        <button onclick="showSignup()">
+            Sign in
+        </button>
+
+    </div>
+
+    <!-- WELCOME TEXT -->
+
+    <div class="welcome">
+
+        <h1>
+            Welcome to our website
+        </h1>
+
+        <p>
+            We connect buyers and sellers,
+            providing reliable real estate services.
+        </p>
+
+        <p>
+            Find beautiful houses with affordable prices
+            and excellent locations.
+        </p>
+
+    </div>
+
+    <!-- LOGIN FORM -->
+
+    <div class="form-box" id="loginForm">
+
+        <h2>Log In</h2>
+
+        <input type="text"
+        id="loginUsername"
+        placeholder="Username">
+
+        <input type="password"
+        id="loginPassword"
+        placeholder="Password">
+
+        <button class="submit-btn"
+        onclick="loginUser()">
+
+            Submit
+
+        </button>
+
+    </div>
+
+    <!-- SIGNUP FORM -->
+
+    <div class="form-box" id="signupForm">
+
+        <h2>Sign In</h2>
+
+        <input type="text"
+        placeholder="Full Names">
+
+        <input type="email"
+        placeholder="Email">
+
+        <input type="password"
+        placeholder="Create Password">
+
+        <input type="password"
+        placeholder="Confirm Password">
+
+        <button class="submit-btn"
+        onclick="signupUser()">
+
+            Complete
+
+        </button>
+
+    </div>
+
+    <!-- PROTECTED WEBSITE CONTENT -->
+
+    <div id="websiteContent">
+
+        <h1>
+            Available Houses
+        </h1>
+
+        <div class="property-box">
+
+            <h2>Modern Family House</h2>
+
+            <p>
+                Location: Gaborone
+            </p>
+
+            <p>
+                Price: P1,500,000
+            </p>
+
+            <p>
+                Features:
+                4 Bedrooms,
+                Swimming Pool,
+                Garage
+            </p>
+
+        </div>
+
+        <div class="property-box">
+
+            <h2>Luxury Apartment</h2>
+
+            <p>
+                Location: Francistown
+            </p>
+
+            <p>
+                Price: P850,000
+            </p>
+
+            <p>
+                Features:
+                2 Bedrooms,
+                Balcony,
+                Security System
+            </p>
+
+        </div>
+
+        <br>
+
+        <button class="submit-btn"
+        onclick="logout()">
+
+            Log Out
+
+        </button>
+
+    </div>
+
+    <script>
+
+        // SHOW LOGIN FORM
+
+        function showLogin(){
+
+            document.getElementById("loginForm").style.display = "block";
+
+            document.getElementById("signupForm").style.display = "none";
+        }
+
+        // SHOW SIGNUP FORM
+
+        function showSignup(){
+
+            document.getElementById("signupForm").style.display = "block";
+
+            document.getElementById("loginForm").style.display = "none";
+        }
+
+        // LOGIN FUNCTION
+
+        function loginUser(){
+
+            let username =
+            document.getElementById("loginUsername").value;
+
+            let password =
+            document.getElementById("loginPassword").value;
+
+            if(username !== "" && password !== ""){
+
+                document.getElementById("loginForm").style.display = "none";
+
+                document.getElementById("websiteContent").style.display = "block";
+
+                document.querySelector(".welcome").style.display = "none";
+
+                document.querySelector(".top-buttons").style.display = "none";
+
+            }
+
+            else{
+
+                alert("Please enter your login details");
+
+            }
+
+        }
+
+        // SIGNUP FUNCTION
+
+        function signupUser(){
+
+            document.getElementById("signupForm").style.display = "none";
+
+            document.getElementById("websiteContent").style.display = "block";
+
+            document.querySelector(".welcome").style.display = "none";
+
+            document.querySelector(".top-buttons").style.display = "none";
+
+        }
+
+        // LOGOUT FUNCTION
+
+        function logout(){
+
+            location.reload();
+
+        }
+
+    </script>
+
 </body>
 </html>
