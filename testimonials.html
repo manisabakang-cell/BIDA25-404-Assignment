@@ -1,254 +1,377 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonial</title>
+
+    <title>Testimonials - Find Your Home</title>
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
-	<style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
         body {
-            /* Background image */
             background-image: url('background 2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-			min-height: 100vh;
-			width: 100%;
-        }
-		/* Headers */ 
-        header { 
-            background-color: black;
-            color: pink; 
-            padding: 15 px; 
-            text-align: center;
-            margin: 0 20 px;
-        	font-size: medium;
-        } 
-		/* Navigation */ 
-        nav { 
-            background-color: black;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
             color: white;
-            padding: 10px; 
-            text-align: left;
-            display: flex;
-            justify-content: center;
-        	gap: 10px;
-        	flex-wrap: wrap;
-        } 
- 
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            margin: 0 15px; 
-        } 
- 
-        nav a:hover { 
-            text-decoration: underline; 
-        } 
-        .testimonial-container {
-            display: grid;
-            grid-template-columns: 1fr; 
-            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            margin-bottom: 60px;
-        }
-        .testimonial {
-            border: 1px solid #ccc;
-            padding: 15px;
             text-align: center;
-            border-radius: 10px;
-            background-color: white;
-            color: black;
         }
-		.h1 {
-			font-size: 1.0em;
-		}	
+
+        /* Navigation */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Main */
+        main {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.45);
+            min-height: 70vh;
+        }
+
         h1 {
             text-align: center;
-		    font-size: medium;
-            font-weight: medium;
-            color: pink;
-            font-size: 2.2em;
-            font-weight: bold;
+            margin-bottom: 20px;
         }
+
         h2 {
             text-align: center;
-		    font-size: 1.4em;
-            font-weight: medium;
-            color: pink;
-
+            color: #d4af37;
+            margin-bottom: 30px;
         }
-        form {
-            width: 100%;
-            margin: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            background-color: white;
+
+        /* Testimonials */
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .client-name {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        /* Form */
+        form {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         label {
             display: block;
             margin-top: 15px;
             font-weight: bold;
-			color: black;
+            color: black;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 5px;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            border-radius: 4px;
         }
-         textarea {
+
+        textarea {
             height: 120px;
             resize: none;
         }
-         .buttons {
-            margin-top: 20px;
+
+        /* Buttons */
+        .buttons {
+            margin-top: 25px;
             text-align: center;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.3s ease;
         }
 
         .submit-btn {
-            background-color: pink;
+            background: #d4af37;
             color: black;
         }
 
         .clear-btn {
-            background-color: black;
-            color: pink;
+            background: black;
+            color: white;
             margin-right: 10px;
         }
 
         button:hover {
             opacity: 0.9;
-			text-decoration: underline;
+            transform: scale(1.05);
         }
-       @media (min-width: 600px) {
+
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .animated-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+
+            border-radius: 0%;
+
+            transition:
+                border-radius 1s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+            animation: circleReveal 2s forwards;
+        }
+
+        .animated-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes circleReveal {
+
+            from {
+                border-radius: 0%;
+                transform: rotate(0deg);
+            }
+
+            to {
+                border-radius: 50%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+
             .testimonial-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (min-width: 1000px) {
+
             .testimonial-container {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-		
-		/* Footer */ 
- footer { 
-    background-color: pink; 
-    color: black; 
-    text-align: center; 
-    padding: 15 px; 
-    margin-top: 0 20 px; 
-    font-size: medium;
-	position: fixed;
-	bottom: 0; 
-	width: 100%; 
- } 
-    </style>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Testimonials</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a> 
-        <a href="explore listings.html">Explore Listings</a> 
-        <a href="contact.html">Contact</a>
-        <a href="testimonials.html">Testimonials</a>
-    </nav>  
-  </header>
-    <main class="container my-5">
-        <h2>See What Other People Think About Us!</h2>
-        <div class="testimonial-container">
-          <div class="testimonial" data-name="t1">
-          <article>
-            <p>The house is amazing, the color blends with the furniture and is very spacious</p>
-            <div class="h1">
-              Joy Manisa
-            </div>
-          </article>
-          </div>
-          <div class="testimonial" data-name="t2">  
-          <article>
-            <p>The material used is of good quality making the house durable</p>
-            <div class="h1">
-              Monty Marman
-            </div>
-          </article>
-          </div> 
-          <div class="testimonial" data-name="t3">
-          <article>
-            <p>I would give their customer service a 10/ 10</p>
-            <div class="h1">
-              Tsalano Tiny
-            </div>
-          </article>
-          </div>
-          <div class="testimonial" data-name="t4">
-          <article>
-            <p>Sending my gratitude to the agent who moved around with me to view the houses until I got the one I like</p>
-            <div class="h1">
-              Candy Mathumo
-            </div>
-          </article>
-          </div>
-          <div class="testimonial" data-name="t5">
-          <article>
-            <p>Thank you so much @Find your home, I and my family indeed we found our home and we love it</p>
-            <div class="h1">
-              Katso Molobeng
-            </div>
-          </article>
-          </div>  
-          <div class="testimonial" data-name="t6">
-          <article>
-            <p>It was a nice experience consulting and getting the house I desired</p>
-            <div class="h1">
-              Andrew Johane
-            </div>
-          </article>
-          </div>
-        </div> 
 
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Find Your Home</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore listings.html">Explore Listings</a>
+            <a href="contact.html">Contact</a>
+            <a href="testimonials.html">Testimonials</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <h2>See What Other People Think About Us!</h2>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial">
+                <p>
+                    The house is amazing, the color blends with the furniture and is very spacious.
+                </p>
+
+                <div class="client-name">
+                    Joy Manisa
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    The material used is of good quality making the house durable.
+                </p>
+
+                <div class="client-name">
+                    Monty Marman
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    I would give their customer service a 10/10.
+                </p>
+
+                <div class="client-name">
+                    Tsalano Tiny
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    Sending my gratitude to the agent who moved around with me to view houses until I found the one I like.
+                </p>
+
+                <div class="client-name">
+                    Candy Mathumo
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    Thank you so much @Find Your Home. My family and I truly found our dream home.
+                </p>
+
+                <div class="client-name">
+                    Katso Molobeng
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    It was a nice experience consulting and getting the house I desired.
+                </p>
+
+                <div class="client-name">
+                    Andrew Johane
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Form -->
         <h2>Tell Us About Your Experience</h2>
+
         <form action="acknowledgement.html" method="get">
+
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+
+            <input type="text"
+                   id="name"
+                   name="name"
+                   required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+
+            <input type="email"
+                   id="email"
+                   name="email"
+                   required>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+
+            <textarea id="message"
+                      name="message"
+                      required></textarea>
 
             <div class="buttons">
-                <button type="reset" class="clear-btn">Clear</button>
-                <button type="submit" class="submit-btn">Submit</button>
+
+                <button type="reset"
+                        class="clear-btn">
+                    Clear
+                </button>
+
+                <button type="submit"
+                        class="submit-btn">
+                    Submit
+                </button>
+
             </div>
+
         </form>
-    </main> 
-	<footer>
-        <p>&copy; 2025 Find Your Home</p>
+
+        <!-- Logo -->
+        <div class="logo-container">
+
+            <img src="logo.jpg"
+                 alt="Brand Logo"
+                 class="animated-image">
+
+            <h3 class="mt-4">
+                --- Why you should trust our services ---
+            </h3>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Find Your Home. All Rights Reserved.</p>
     </footer>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
