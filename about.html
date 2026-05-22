@@ -1,49 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css"> 
-	<!-- Bootstrap CSS -->
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Find Your Home</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<style>
+
+    <style>
+
         body {
-            /* Background image */
             background-image: url('background 2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-			min-height: 100vh;
-			width: 100%;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
         }
-	</style>
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Main Section */
+        main {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.45);
+            min-height: 70vh;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.55);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 1000px;
+            margin: auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #d4af37;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Logo */
+        .logo-container {
+            margin-top: 50px;
+        }
+
+        .animated-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+
+            /* Start square */
+            border-radius: 0%;
+
+            transition:
+                border-radius 1s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+            animation: circleReveal 2s forwards;
+        }
+
+        /* Hover effect */
+        .animated-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Circle animation */
+        @keyframes circleReveal {
+
+            from {
+                border-radius: 0%;
+                transform: rotate(0deg);
+            }
+
+            to {
+                border-radius: 50%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
+
 </head>
+
 <body>
-  <header>
-    <h1>About</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a> 
-        <a href="explore listings.html">Explore Listings</a> 
-        <a href="contact.html">Contact</a>
-		 <a href="testimonials">Testimonials</a>
-    </nav>
-  </header>
-<main>
-	<h1>Aim and Purpose</h1>	
-    <p>Our aim is to see our clientel request to the end successfully.</p>
-    <p>Our company focuses on finding desired homes and buildings for our customers.</p>
-	<h1>Services</h1>
-    <p>Property consultation- This is to gather information from buyers and rental ternants.</p>
-	<p>House viewing- On agreed terms we schedule and show the property to potential customers before deciding for safety purposes</p>
-    <p>Paperwork guiding- This is done to go over the terms and conditions provided and asked for from or to the lessee and lessor or buyer and seller.</p>
-    <p>Negotiation support- Some people consider certain places to be overpriced therefore we assist in also acquiring the place at a certain and possibly agreed amount.</p>
-    <p>Tenant sourcing- We also create more awareness to bring more potential house owners both for temporary living and permanent living.</p>
-	<p>Legal contracts- Legal documents should be signed and legalized to avoid situations that would bring both parties before the law.</p>
-</main>
-<footer> 
-    <p>&copy; 2025 Find Your Home</p> 
-</footer>
-</body>	
-</html>   
+
+    <header>
+
+        <h1>Find Your Home</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore listings.html">Explore Listings</a>
+            <a href="contact.html">Contact</a>
+            <a href="testimonials.html">Testimonials</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="content-box">
+
+            <h1>About Us</h1>
+
+            <h2>Aim and Purpose</h2>
+
+            <p>
+                Our aim is to ensure our clients' requests are completed successfully and professionally.
+            </p>
+
+            <p>
+                Our company focuses on finding desired homes and buildings for our customers with trust, dedication, and quality service.
+            </p>
+
+            <h2>Services</h2>
+
+            <p>
+                <strong>Property Consultation</strong> — Gathering important information from buyers and rental tenants.
+            </p>
+
+            <p>
+                <strong>House Viewing</strong> — Scheduling and showing properties to potential customers before decisions are made.
+            </p>
+
+            <p>
+                <strong>Paperwork Guidance</strong> — Explaining terms and conditions between buyers, sellers, lessors, and lessees.
+            </p>
+
+            <p>
+                <strong>Negotiation Support</strong> — Assisting customers in negotiating fair property prices.
+            </p>
+
+            <p>
+                <strong>Tenant Sourcing</strong> — Creating awareness to attract more property owners and tenants.
+            </p>
+
+            <p>
+                <strong>Legal Contracts</strong> — Ensuring all legal agreements are properly signed and authorized.
+            </p>
+
+            <!-- Logo -->
+            <div class="logo-container">
+
+                <img src="logo.jpg"
+                     alt="Brand Logo"
+                     class="animated-image">
+
+                <h3 class="mt-4">
+                    --- Find Your Home ---
+                </h3>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Find Your Home. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
