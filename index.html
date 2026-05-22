@@ -17,6 +17,27 @@
 			min-height: 100vh;
 			width: 100%;
         }
+		h3,h4 {
+			float: right;
+			color: white;
+			background-color: black; 
+		}
+		button { 
+			cursor: pointer;
+		}
+		/* submit button */
+		.submit-btn {
+			background-color: black
+			color: pink;
+		}
+		.submit-btn:hover {
+			text-decoration: underline;
+		}
+		/* complete button */
+		.complete-btn {
+			background-color: pink;
+			color: black;
+		}	
     </style>
 </head>
 <body>
@@ -37,8 +58,43 @@
         <p> Here we meet, contact, get and give out information online</p>
         <p> We connect buyers and sellers, providing reliable real estate information online<p/>
         <p>A real estate agency established in 2025 @ Find your home</p>
-    </section>
-    </main>
+		<h3>Log in</h3>  
+            <div> 
+                <label for="username">Your Username:</label><br> 
+                <input type="text" id="name" name="name" required> 
+            </div> 
+            <br>
+            <div>
+                <label for="password">Your Password:</label><br>
+                <input type="text" id="password" password="password" required> 
+            </div>
+            <br> 
+            <button type="submit">Submit</button> 
+        <h4>Sign in</h4>
+            <div>
+                <label for="your full names">Your Full Names:</label><br>
+                <input type="text" id="full names" full names="full nnames" required>
+            </div>
+            <br>
+            <div>
+                <label for="your email">Your Email:</label><br>
+                <input type="text" id="email" email="email" required> 
+            </div>
+            <br>
+            <div>
+                <label for="create your password">Create Your Password:</label><br>
+                <input type="text" id="password" password="password" required>
+            </div>
+            <br>
+            <div>
+                <label for="confirm your password">Confirm Your Password:</label><br>
+                <input type="text" id="password" password="password" required>
+            </div>
+            <br>
+            <button type="submit">Complete</button
+          </form> 
+      </section>
+    </main> 
     <footer> 
     <p>&copy; 2025 Find your Home</p> 
     </footer>     
